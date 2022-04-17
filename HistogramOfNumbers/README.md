@@ -11,4 +11,4 @@ The description of the problem goes here.
 Function Name | Return Type | Description of function | Parameters
 ---|---|---|---
 main | void | The starting point of the program. Initializes a vector to store numbers in and calls the beginHistogram function | none
-beginHistogram | void | Calls 6 functions displayHeader, storeDataFromNumbersTextFileInVector, displayNumbersAndTheirConvertedVersions, displayInvalidNumbers, displayFrequencyOfValidNumbers, displayFooter | none.
+beginHistogram | void | Calls 6 functions displayHeader, storeDataFromNumbersTextFileInVector, displayNumbersAndTheirConvertedVersions, displayInvalidNumbers, displayFrequencyOfValidNumbers, displayFooter | A vector of numbers
