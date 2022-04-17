@@ -112,48 +112,37 @@ void displayFrequencyOfValidNumbers(vector<int> &numbers){
 }
 int getRangeValue(vector<int> &validNumbers, int range){
     sort(validNumbers.begin(), validNumbers.end());
-    int rangeTen = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 1 && n <= 10;});
-    int rangeTwenty = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 11 && n <= 20;});
-    int rangeThirty = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 21 && n <= 30;});
-    int rangeForty = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 31 && n <= 40;});
-    int rangeFifty = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 41 && n <= 50;});
-    int rangeSixty = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 51 && n <= 60;});
-    int rangeSeventy = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 61 && n <= 70;});
-    int rangeEighty = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 71 && n <= 80;});
-    int rangeNinety = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 81 && n <= 90;});
-    int rangeHundred = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 91 && n <= 100;});
-    
     int value = 0;
     switch(range){
         case 0:
-            value = rangeTen;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 1 && n <= 10;});
             break;
         case 1:
-            value = rangeTwenty;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 11 && n <= 20;});
             break;
         case 2:
-            value = rangeThirty;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 21 && n <= 30;});
             break;
         case 3:
-            value = rangeForty;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 31 && n <= 40;});
             break;
         case 4:
-            value = rangeFifty;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 41 && n <= 50;});
             break;
         case 5:
-            value = rangeSixty;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 51 && n <= 60;});
             break;
         case 6:
-            value = rangeSeventy;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 61 && n <= 70;});
             break;
         case 7:
-            value = rangeEighty;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 71 && n <= 80;});
             break;
         case 8:
-            value = rangeNinety;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 81 && n <= 90;});
             break;
         case 9:
-            value = rangeHundred;
+            value = count_if(validNumbers.begin(), validNumbers.end(), [](int n){return n >= 91 && n <= 100;});
             break;
         default:
             break;
