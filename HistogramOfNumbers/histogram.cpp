@@ -56,7 +56,9 @@ void displayFrequencyOfValidNumbers(vector<int> &numbers){
     //set<int> validNumbersSet = set<int>(validNumbers.begin(), validNumbers.end());
     
     cout<<"\n\nFrequency of valid numbers:\nA * denotes a frequency of 5 numbers and a | denotes a frequency of 1 number\n"<<endl;
-    for(int start = 0; start <= 1; start++){
+    // Do i really need two sets of for loops or can i put the logic from the first loop into the second loop?
+	// Modify these two for loops
+	for(int start = 0; start <= 1; start++){
         for(int col = 0; col < COL; col++){
             if(start == 0 && col <= 9){
                 cout<<"Range";
