@@ -189,7 +189,6 @@ vector<int> getValidNumbers(vector<int> &numbers)
             validNumbers.push_back(numbers[i]);
         }
     }
-    validCount = validNumbers.size();
     return validNumbers;
 }
 void displayHeader()
