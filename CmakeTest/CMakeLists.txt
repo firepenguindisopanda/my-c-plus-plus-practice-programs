@@ -15,4 +15,4 @@ file(GLOB CPP_SOURCE
 
 inlcude_directories(${PROJECT_SOURCE_DIR}/src)
 
-add_executable(${PROJECT_NAME} ${CPP_SOURCE})
+add_executable(main ${CPP_SOURCE})
