@@ -13,6 +13,6 @@ file(GLOB CPP_SOURCE
     "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 
-inlcude_directories(${PROJECT_SOURCE_DIR}/src)
+include_directories(${PROJECT_SOURCE_DIR}/src)
 
 add_executable(main ${CPP_SOURCE})
