@@ -36,4 +36,10 @@ struct BTNode {
     BTNode *parent;
 };
 
+// A STRUCT CONTAINING attributes for a QueueNode object
+struct QueueNode {
+    Incident incidentData;
+    QueueNode *next;
+};
+
 #endif
