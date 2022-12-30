@@ -29,5 +29,11 @@ struct Incident {
 };
 
 // A STRUCT CONTAINING attributes for a BTNode object
+struct BTNode {
+    Patient patient;
+    BTNode *left;
+    BTNode *right;
+    BTNode *parent;
+};
 
 #endif
