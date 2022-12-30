@@ -10,6 +10,7 @@ struct HashTable {
     Condition elements [MAX_ELEMENTS];
     int tableSize;
 };
+
 HashTable * initHashTable(int tableSize);
 void insertHashTable(HashTable * hashTable, Condition condition, int tableSize);
 int containsHashTable(HashTable * hashTable, string key, int tableSize);
