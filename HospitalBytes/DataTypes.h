@@ -9,4 +9,25 @@ struct Condition {
     int priority;
 };
 
+// A STRUCT CONTAINING attributes for a Patient object
+struct Patient {
+    int patientID;
+    string patientName;
+    string phone;
+};
+
+// A STRUCT CONTAINING attributes for an Incident object
+struct Incident {
+    int incidentID;
+    int patientID;
+    string conditionName;
+    string description;
+    int priority;
+    string status;
+    string date;
+    string time;
+};
+
+// A STRUCT CONTAINING attributes for a BTNode object
+
 #endif
