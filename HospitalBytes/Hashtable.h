@@ -3,7 +3,7 @@
 #include <iostream>
 #include "DataTypes.h"
 #define MAX_ELEMENTS 1000
-#define EMPTY ""
+#define EMPTY " "
 using namespace std;
 
 struct HashTable {
