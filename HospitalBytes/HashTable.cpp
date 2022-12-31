@@ -14,3 +14,11 @@ HashTable * initHashTable(int tableSize) {
     }
     return hashTable;
 }
+
+int hashCode(int tableSize, string key){
+    int hash = 0;
+    for (int i = 0; i < key.length(); i++) {
+        hash = (hash + key[i]) % tableSize;
+    }
+    return hash;
+}
