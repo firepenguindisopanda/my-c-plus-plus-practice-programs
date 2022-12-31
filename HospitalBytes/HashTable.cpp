@@ -16,7 +16,7 @@ HashTable * initHashTable(int tableSize) {
 }
 
 int hashCode(int tableSize, string key){
-    int hash = 0, x = 0, ascii = 0;
+    int hash {}, x {0}, ascii {};
     int ht_length = key.length();
     for(x = 0; x < ht_length; x++){
         ascii = (int)key[x];
@@ -37,7 +37,7 @@ int hashCode(int tableSize, string key){
  */
 int containsHashTable(HashTable * hashTable, string key, int tableSize){
     int hash = hashCode(tableSize, key);
-    int i = 0, d = 0, original = 0;
+    int i {}, d {}, original {};
     i = hash % tableSize;
     if(hashTable->elements[i].name == key){
         return hashTable->elements[i].priority;
@@ -57,7 +57,7 @@ int containsHashTable(HashTable * hashTable, string key, int tableSize){
 }
 
 void insertHashTable(HashTable * hashTable, Condition condition, int tableSize){
-    int location =0, hash = 0, k = 0;
+    int location {}, hash {}, k {};
     hash = hashCode(tableSize, condition.name);
     location = hash % tableSize;
     if(hashTable->elements[location].priority == 0){
