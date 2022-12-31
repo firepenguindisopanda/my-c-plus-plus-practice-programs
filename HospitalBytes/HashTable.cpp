@@ -16,9 +16,42 @@ HashTable * initHashTable(int tableSize) {
 }
 
 int hashCode(int tableSize, string key){
-    int hash = 0;
-    for (int i = 0; i < key.length(); i++) {
-        hash = (hash + key[i]) % tableSize;
+    int hash = 0, x = 0, ascii = 0;
+    int ht_length = key.length();
+    for(x = 0; x < ht_length; x++){
+        ascii = (int)key[x];
+        hash = hash + (ascii * x);
+        //hash = (hash << 5) + hash + ascii;
     }
     return hash;
+    
+}
+
+/**
+ * @brief Determines if the hash table contains the given key
+ * 
+ * @param hashTable 
+ * @param key 
+ * @param tableSize 
+ * @return int 
+ */
+int containsHashTable(HashTable * hashTable, string key, int tableSize){
+    int hash = hashCode(tableSize, key);
+    int i = 0, d = 0, original = 0;
+    i = hash % tableSize;
+    if(hashTable->elements[i].name == key){
+        return hashTable->elements[i].priority;
+    }
+    original = i;
+    d = hash % (tableSize / 2);
+    i = i + d;
+
+    while(i != original){
+        if(hashTable->elements[i].name == key){
+            return hashTable->elements[i].priority;
+        }
+        i = i + d;
+    }
+    return -1;
+    
 }
