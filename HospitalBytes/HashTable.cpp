@@ -55,3 +55,21 @@ int containsHashTable(HashTable * hashTable, string key, int tableSize){
     return -1;
     
 }
+
+void insertHashTable(HashTable * hashTable, Condition condition, int tableSize){
+    int location =0, hash = 0, k = 0;
+    hash = hashCode(tableSize, condition.name);
+    location = hash % tableSize;
+    if(hashTable->elements[location].priority == 0){
+        hashTable->elements[location].name = condition.name;
+        hashTable->elements[location].priority = condition.priority;
+    }else{
+        k = hash % (tableSize / 2);
+        location = location + k;
+        while(hashTable->elements[location].priority != 0){
+            location = location + k;
+        }
+        hashTable->elements[location].name = condition.name;
+        hashTable->elements[location].priority = condition.priority;
+    }
+}
