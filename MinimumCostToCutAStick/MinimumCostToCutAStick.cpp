@@ -11,6 +11,14 @@ namespace dynamic_programming
      */
     namespace dynamicProgramming
     {
+        /**
+         * @brief depth first search function to find the minimum cost to cut a stick
+         * 
+         * @param cuts 
+         * @param start 
+         * @param end 
+         * @return int 
+         */
         int dfs(std::vector<int> &cuts, int start, int end)
         {
             if (start + 1 == end)
@@ -27,7 +35,9 @@ namespace dynamic_programming
         }
         /**
          * @brief Minimum cost to cut a stick
-         *
+         * @param {std::vector<int>} cuts
+         * @param {int} n - length of the stick
+         * @returns {int} - returns the minimum cost to cut the stick
          */
         int minCostToCutAStick(std::vector<int> &cuts, int n)
         {
