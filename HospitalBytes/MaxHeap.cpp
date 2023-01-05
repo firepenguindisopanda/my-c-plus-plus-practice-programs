@@ -12,3 +12,8 @@ int leftChild(int i)
 {
     return (2*i);
 }
+
+int rightChild(int i)
+{
+    return (2*i) + 1;
+}
