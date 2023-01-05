@@ -53,7 +53,26 @@ void maxHeapify(Incident A[], int heapSize, int i)
  */
 void buildMaxHeap(Incident A[], int lengthA)
 {
-    int heapSize = lengthA - 1;
-    for (int i = heapSize/2; i >= 0; i--)
+    int heapSize = lengthA;
+    for (int i = heapSize/2; i >= 1; i--)
         maxHeapify(A, heapSize, i);
+}
+
+/**
+ * @brief heapSort
+ * Given an Array A of type Incident and lengthA, which is the amount of elements in  A,
+ * Sorts the elements in A based on the priority of the incidents
+ */
+void heapSort(Incident A[], int lengthA)
+{
+    int heapSize = lengthA;
+    buildMaxHeap(A, lengthA);
+
+    for(int i = lengthA; i >= 2; i--){
+        Incident temp = A[1];
+        A[1] = A[i];
+        A[i] = temp;
+        heapSize = heapSize - 1;
+        maxHeapify(A, heapSize, 1);
+    }
 }
