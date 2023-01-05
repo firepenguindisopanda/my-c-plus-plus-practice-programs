@@ -33,7 +33,7 @@ void maxHeapify(Incident A[], int heapSize, int i)
     int largest = i;
     if (l <= heapSize && A[l].priority > A[i].priority)
         largest = l;
-        
+
     if (r <= heapSize && A[r].priority > A[largest].priority)
         largest = r;
 
@@ -44,4 +44,16 @@ void maxHeapify(Incident A[], int heapSize, int i)
         A[largest] = temp;
         maxHeapify(A, heapSize, largest);
     }
+}
+
+/**
+ * @brief buildMaxHeap
+ * Given an array A of type Incident where the lengthA is the amount of elements in A,
+ * Converts A into a max heap on the priority of each patient.
+ */
+void buildMaxHeap(Incident A[], int lengthA)
+{
+    int heapSize = lengthA - 1;
+    for (int i = heapSize/2; i >= 0; i--)
+        maxHeapify(A, heapSize, i);
 }
