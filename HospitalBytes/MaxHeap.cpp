@@ -7,3 +7,8 @@ int parent(int i)
 {
     return (i/2);
 }
+
+int leftChild(int i)
+{
+    return (2*i);
+}
