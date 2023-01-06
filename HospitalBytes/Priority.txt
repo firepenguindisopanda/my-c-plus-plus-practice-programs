@@ -1,0 +1,7 @@
+AsthmaAttack 80
+AnaphylacticShock 100
+Hives 50
+PinkEye 70
+Burns 60
+Concussion 90
+XXX
