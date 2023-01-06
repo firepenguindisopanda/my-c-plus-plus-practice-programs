@@ -143,11 +143,39 @@ BTNode * treeMinimum (BTNode * root) {
  * @param root The root of the binary search tree
  * 
  */
-void displayBST (BTNode * root) {
+void displayBST(BTNode * root) {
 	if (root == NULL)
 		return;
 		
 	displayBST (root->left);
 	cout << root->patient.patientID << " ";
 	displayBST (root->right);
+}
+
+/**
+ * @brief Displays the contents of the binary search tree in preorder
+ * @param root The root of the binary search tree
+ * 
+ */
+void displayPreOrder(BTNode * root) {
+	if (root == NULL)
+		return;
+		
+	cout << root->patient.patientID << " ";
+	displayPreOrder (root->left);
+	displayPreOrder (root->right);
+}
+
+/**
+ * @brief Displays the contents of the binary search tree in postorder
+ * @param root The root of the binary search tree
+ * 
+ */
+void displayPostOrder(BTNode * root) {
+	if (root == NULL)
+		return;
+		
+	displayPostOrder (root->left);
+	displayPostOrder (root->right);
+	cout << root->patient.patientID << " ";
 }
