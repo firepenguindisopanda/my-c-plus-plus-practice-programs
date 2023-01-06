@@ -19,3 +19,19 @@ void maxHeapInsert(Incident A[], int heapSize, Incident newIncident)
     A[heapSize].priority = INT_MIN;
     heapIncreaseKey(A, heapSize, newIncident.priority);
 }
+
+/**
+ * @brief Returns the highest priority element in the max priority queue
+ * stored in array A.
+ * @param {Incident A[]} The array of type Incident
+ * @return {Incident} The highest priority element in the max priority queue
+ */
+Incident heapMaximum(Incident A[])
+{
+
+    Incident highestIncident;
+    highestIncident.patientID = A[1].patientID;
+    highestIncident.conditionName = A[1].conditionName;
+    highestIncident.priority = A[1].priority;
+    return highestIncident;
+}
