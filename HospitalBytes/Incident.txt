@@ -1,0 +1,12 @@
+1000 AsthmaAttack 80
+1001 PinkEye 70
+1002 Burns 60
+1003 Burns 60
+1004 AnaphylacticShock 100
+1005 Hives 50
+1006 Concussion 90
+1007 AsthmaAttack 80
+1008 Hives 50
+1009 AnaphylacticShock 100
+1010 Concussion 90
+999
