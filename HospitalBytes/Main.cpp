@@ -49,4 +49,6 @@ int main()
     // Displaying the binary search tree
     cout << "\nDisplaying the binary search tree" << endl;
     displayBST(root);
+
+    system("pause");
 }
