@@ -137,3 +137,17 @@ BTNode * treeMinimum (BTNode * root) {
 	
 	return root;
 }
+
+/**
+ * @brief Displays the contents of the binary search tree in inorder
+ * @param root The root of the binary search tree
+ * 
+ */
+void displayBST (BTNode * root) {
+	if (root == NULL)
+		return;
+		
+	displayBST (root->left);
+	cout << root->patient.patientID << " ";
+	displayBST (root->right);
+}
