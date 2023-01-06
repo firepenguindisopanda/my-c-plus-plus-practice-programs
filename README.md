@@ -8,4 +8,26 @@ This folder contains a single histogram.cpp file and a single numbers.txt file. 
 
 ![Demonstration for HistogramOfNumbers](https://github.com/firepenguindisopanda/my-c-plus-plus-practice-programs/blob/main/readme_assets/histogram-output.gif)
 
-----
+---
+
+## Configuration in tasks.json for args
+
+```json
+"args": [
+    "-fdiagnostics-color=always",
+    "-g",
+    "-ggdb",
+    "-O2",
+    "-DNDEBUG",
+    "-pedantic-errors",
+    "-Wall",
+    "-Weffc++",
+    "-Wextra",
+    "-Wsign-conversion",
+    "-Werror",
+    "-std=c++17",
+    "${file}",
+    "-o",
+    "${fileDirname}\\${fileBasenameNoExtension}.exe"
+],
+```
