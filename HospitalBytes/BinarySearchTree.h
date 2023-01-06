@@ -10,5 +10,7 @@ BTNode * insertBST(BTNode * root, Patient newPatient);
 BTNode * treeMinimum(BTNode * root);
 BTNode * inOrderSuccessor(BTNode * node);
 void displayBST(BTNode * root);
+void displayPreOrder(BTNode * root);
+void displayPostOrder(BTNode * root);
 
 #endif
