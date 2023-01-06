@@ -7,6 +7,11 @@
 #include "Queue.h"
 #include "HashTable.h"
 #include "BinarySearchTree.h"
+#include "BinarySearchTree.cpp"
+#include "HashTable.cpp"
+#include "Queue.cpp"
+#include "MaxPriorityQueue.cpp"
+#include "MaxHeap.cpp"
 using namespace std;
 
 
@@ -49,6 +54,8 @@ int main()
     // Displaying the binary search tree
     cout << "\nDisplaying the binary search tree" << endl;
     displayBST(root);
+    // displayPreOrder(root);
+    // displayPostOrder(root);
 
     system("pause");
 }
