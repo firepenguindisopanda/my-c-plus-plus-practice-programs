@@ -1,0 +1,12 @@
+1000 EdwardGeere 321-9876
+1001 LatriceRoyale 492-7667
+1002 PatrickStarr 564-9080
+1003 TrixieMattel 224-3681
+1004 NinaFlowers 562-0909
+1005 AlyssaEdwards 732-6645
+1006 VioletChachki 664-3204
+1007 SashaVelour 428-7405
+1008 BiancaDelRio 444-2442
+1009 SharonNeedles 383-7219
+1010 RajaGemini 736-5971
+999
