@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cassert>
 #include <stack>
+#include <queue>
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -74,5 +75,32 @@ class BinaryTree {
                 cout << curr->data << " ";
                 curr = curr->right;
             }
+        }
+
+        int depthOfTree(Node* root) {
+            // iterative depth of tree
+            if (root == NULL) {
+                return 0;
+            }
+            queue<Node*> q;
+            q.push(root);
+            int depth = 0;
+            int nodeCount = 0;
+            while (q.empty() == false) {
+                nodeCount = q.size();
+                while (nodeCount > 0) {
+                    Node* temp = q.front();
+                    q.pop();
+                    if (temp->left != NULL) {
+                        q.push(temp->left);
+                    }
+                    if (temp->right != NULL) {
+                        q.push(temp->right);
+                    }
+                    nodeCount--;
+                }
+                depth++;
+            }
+            return depth;
         }
 };
