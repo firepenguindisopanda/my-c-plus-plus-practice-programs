@@ -103,4 +103,27 @@ class BinaryTree {
             }
             return depth;
         }
+
+        bool isFullBinaryTree(Node* root) {
+            // iterative full binary tree
+            if (root == NULL) {
+                return true;
+            }
+            queue<Node*> q;
+            q.push(root);
+            while (q.empty() == false) {
+                Node* temp = q.front();
+                q.pop();
+                if (temp->left == NULL && temp->right == NULL) {
+                    continue;
+                }
+                if (temp->left != NULL && temp->right != NULL) {
+                    q.push(temp->left);
+                    q.push(temp->right);
+                } else {
+                    return false;
+                }
+            }
+            return true;
+        }
 };
