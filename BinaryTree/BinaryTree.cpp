@@ -124,7 +124,38 @@ class BinaryTree {
         }
 };
 
+static void test_one(){
+    /**
+     * @brief Test Case 1 for Full Binary Tree
+     * 
+     * 
+     */
+    BinaryTree bt;
+    bt.insert(10);
+    bt.insert(5);
+    bt.insert(15);
+    bt.insert(3);
+    bt.insert(7);
+    bt.insert(12);
+    bt.insert(18);
+    bt.insert(1);
+    bt.insert(4);
+    bt.insert(6);
+    bt.insert(8);
+    bt.insert(11);
+    bt.insert(13);
+    bt.insert(16);
+    bt.insert(19);
+    bool result = bt.isFullBinaryTree(bt.root);
+    bool expected = true;
+    cout << "Test Case 1: returns true / 1 for Full Binary Tree" << endl;
+    assert(result == expected);
+    cout << "\tTest Case 1: Passed with code: " << (result == expected) << endl;
+
+}
+
 int main(){
+    test_one();
     BinaryTree bt;
     bt.insert(10);
     bt.insert(5);
