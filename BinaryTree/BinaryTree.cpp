@@ -10,9 +10,9 @@ using namespace std;
 
 class Node {
     public:
-        int data;
-        Node* left;
-        Node* right;
+        int data = 0;
+        Node* left = NULL;
+        Node* right = NULL;
         Node(int data) {
             this->data = data;
             this->left = NULL;
@@ -22,14 +22,10 @@ class Node {
 
 class BinaryTree {
     private:
-        Node* root = NULL;
+        int data = 0;
 
     public:
-        BinaryTree();
-        void insert(int data);
-        void displayInorder(Node* root);
-        int depthOfTree(Node* root);
-        bool isFullBinaryTree(Node* root);
+        Node* root = NULL;
 
         BinaryTree () {
             root = NULL;
@@ -127,3 +123,28 @@ class BinaryTree {
             return true;
         }
 };
+
+int main(){
+    BinaryTree bt;
+    bt.insert(10);
+    bt.insert(5);
+    bt.insert(15);
+    bt.insert(3);
+    bt.insert(7);
+    bt.insert(12);
+    bt.insert(18);
+    bt.insert(1);
+    bt.insert(4);
+    bt.insert(6);
+    bt.insert(8);
+    bt.insert(11);
+    bt.insert(13);
+    bt.insert(16);
+    bt.insert(19);
+    bt.displayInorder(bt.root);
+    cout << endl;
+    cout << bt.depthOfTree(bt.root) << endl;
+    cout << bt.isFullBinaryTree(bt.root) << endl;
+    system("pause");
+    return 0;
+}
