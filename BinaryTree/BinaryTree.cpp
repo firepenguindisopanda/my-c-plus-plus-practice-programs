@@ -142,9 +142,10 @@ int main(){
     bt.insert(16);
     bt.insert(19);
     bt.displayInorder(bt.root);
+    string message = bt.isFullBinaryTree(bt.root) ? "Binary Tree is full" : "Binary Tree is not full";
     cout << endl;
     cout << bt.depthOfTree(bt.root) << endl;
-    cout << bt.isFullBinaryTree(bt.root) << endl;
+    cout << message << endl;
     system("pause");
     return 0;
 }
