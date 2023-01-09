@@ -20,6 +20,7 @@ int main()
     // read patient data and save to binary search tree
     ifstream patientData;
     ifstream incidentData;
+    ifstream priorityData;
     patientData.open("Patient.txt");
     if(!patientData)
     {
@@ -28,8 +29,10 @@ int main()
     }
     int patientID{};
     int incidentId{}, priority{0}, heapSize{0}, count{0};
+    int priorityValue{}, tableSize{701}, priorityNum{0};
     string patientName, patientPhoneNumber;
     string condition;
+    string priorityName;
 
     Incident newIncident;
     Incident incidentArray[1000];
@@ -89,11 +92,11 @@ int main()
     }
 
     // print the incident array
-    cout << "\nDisplaying the incident array" << endl;
-    for(count = 1; count <= heapSize; count++)
-    {
-        cout << incidentArray[count].patientID << " " << incidentArray[count].conditionName << " " << incidentArray[count].priority << endl;
-    }
+    // cout << "\nDisplaying the incident array" << endl;
+    // for(count = 1; count <= heapSize; count++)
+    // {
+    //     cout << incidentArray[count].patientID << " " << incidentArray[count].conditionName << " " << incidentArray[count].priority << endl;
+    // }
 
     system("pause");
     return 0;
