@@ -37,6 +37,9 @@ int main()
     Incident newIncident;
     Incident incidentArray[1000];
 
+    Condition priorityCondition;
+    HashTable * priorityHash;
+
     patientData >> patientID;
     Patient patientInfo;
     BTNode * root = nullptr;
@@ -97,6 +100,32 @@ int main()
     // {
     //     cout << incidentArray[count].patientID << " " << incidentArray[count].conditionName << " " << incidentArray[count].priority << endl;
     // }
+    priorityData.open("Priority.txt");
+    if(!priorityData.is_open()){
+        cout << "Could not find Priority File!..." << endl;
+        exit(1);
+    }
+    priorityData >> priorityName;
+    priorityHash = initHashTable(tableSize);
+    while(priorityName != "XXX")
+    {
+        priorityCondition.name = priorityName;
+        priorityData >> priorityValue;
+        priorityCondition.priority = priorityValue;
+        priorityNum++;
+        insertHashTable(priorityHash, priorityCondition, tableSize);
+        priorityData >> priorityName;
+    }
+    cout << "\nI'm done with priority file\nDisplaying the priority hash table" << endl;
+
+    // display the priority hash table
+    for(count = 0; count < tableSize; count++)
+    {
+        if(priorityHash->elements[count].name != " ")
+        {
+            cout << priorityHash->elements[count].name << " " << priorityHash->elements[count].priority << endl;
+        }
+    }
 
     system("pause");
     return 0;
