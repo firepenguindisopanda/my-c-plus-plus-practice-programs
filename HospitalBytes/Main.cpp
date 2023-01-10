@@ -14,7 +14,7 @@
 #include "MaxHeap.cpp"
 using namespace std;
 
-void hospitalBytesMenu();
+void hospitalBytesMenu(int, int);
 
 int main()
 {
@@ -130,6 +130,26 @@ int main()
 
     Queue * patientQueue = initQueue();
 
+    hospitalBytesMenu(10, 70);
     system("pause");
     return 0;
+}
+
+
+void hospitalBytesMenu(int row, int col)
+{
+    string heading = "Welcome to Hospital Bytes";
+    int middleOfCol{(col - int(heading.length())) / 2}, middleOfRow{row / 2};
+    cout << setw(col) << setfill('*') << "*" << endl;
+    for(int i = 0; i < row; i++)
+    {
+        if((i + 1) == middleOfRow){
+            cout << setw(middleOfCol) << setfill(' ') << " " << "Welcome to Hospital Bytes" << endl;
+        }else{
+            cout << setw(col) << setfill(' ') << " " << endl;
+        }
+    }
+
+    
+
 }
