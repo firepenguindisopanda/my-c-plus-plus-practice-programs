@@ -14,6 +14,7 @@
 #include "MaxHeap.cpp"
 using namespace std;
 
+void hospitalBytesMenu();
 
 int main()
 {
@@ -119,13 +120,15 @@ int main()
     cout << "\nI'm done with priority file\nDisplaying the priority hash table" << endl;
 
     // display the priority hash table
-    for(count = 0; count < tableSize; count++)
-    {
-        if(priorityHash->elements[count].name != " ")
-        {
-            cout << priorityHash->elements[count].name << " " << priorityHash->elements[count].priority << endl;
-        }
-    }
+    // for(count = 0; count < tableSize; count++)
+    // {
+    //     if(priorityHash->elements[count].name != " ")
+    //     {
+    //         cout << priorityHash->elements[count].name << " " << priorityHash->elements[count].priority << endl;
+    //     }
+    // }
+
+    Queue * patientQueue = initQueue();
 
     system("pause");
     return 0;
